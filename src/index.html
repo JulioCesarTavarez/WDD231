@@ -11,7 +11,7 @@
     <p class="disclaimer">
       This is not a real NPS website. It is an educational exercise. If you
       landed here by accident, to find the real website visit
-      <a href="parkUrl">[park name]</a>
+      <a href="parkUrl" class="disclaimer-link">Yellowstone National Park</a>
     </p>
     <div class="skip-links" aria-label="short-cut links" role="navigation">
       <ul>
@@ -54,11 +54,11 @@
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-          <button id="global-nav-toggle">
+          <button id="global-nav-toggle" class ="global-nav-toggle">
             <svg class="icon">
               <use xlink:href="/images/sprite.symbol.svg#menu"></use>
             </svg>
-            <span class="visually-hidden">Open</span> Menu
+            <span class="visually-hidden">Open</span> <p>Menu</p>
           </button>
         </div>
         <nav class="global-nav">
@@ -80,16 +80,53 @@
           </ul>
         </nav>
       </section>
+
+      <section id="hero-banner">
+        <img 
+          id="hero-banner__image"
+          src="https://www.nps.gov/yell/images/yell/yell-hero.jpg"
+          alt="Yellowstone National Park"
+          class="hero-banner__image"
+        />
+        <div class="hero-banner__content">
+          <h1>Yellowstone</h1>
+          <div id="park-Discription">
+            <p class="parkType">National Park</p>
+            <p class="statesOfPark">ID,MT,WY</p>
+          </div>
+        </div>
+      </section>
       <section id="park-header">
-        <a href="#">
+        <a href="#" class="banner-icons">
           <span>Info</span>
           <svg class="icon" role="presentation" focusable="false">
             <use xlink:href="/images/sprite.symbol.svg#info"></use>
           </svg>
         </a>
-        <svg class="icon" role="presentation" focusable="false">
-          <use xlink:href="/images/sprite.symbol.svg#alert"></use>
-        </svg>
+        <a href="#" class="banner-icons">
+          <span>Alerts</span>
+          <svg class="icon" role="presentation" focusable="false">
+            <use xlink:href="/images/sprite.symbol.svg#alert"></use>
+          </svg>
+        </a>
+        <a href="#" class="banner-icons">
+          <span>Maps</span>
+          <svg class="icon" role="presentation" focusable="false">
+            <use xlink:href="/images/sprite.symbol.svg#location"></use>
+          </svg>
+        </a>
+        <a href="#" class="banner-icons">
+          <span>Calendar</span>
+          <svg class="icon" role="presentation" focusable="false">
+            <use xlink:href="/images/sprite.symbol.svg#calendar"></use>
+          </svg>
+        </a>
+        <a href="#" class="banner-icons">
+          <span>Fees</span> 
+          <svg class="icon" role="presentation" focusable="false">
+            <use xlink:href="/images/sprite.symbol.svg#fee-22"></use>
+          </svg>
+        </a>
       </section>
     </header>
     <main id="main"></main>

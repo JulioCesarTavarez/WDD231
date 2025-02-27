@@ -171,3 +171,142 @@ svg {
   background-color: var(--bs-black);
   fill: white;
 }
+
+
+header{
+  background-color: var(--bs-black);
+  color: var(--bs-white);
+}
+.global-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  height: 70px;
+}
+
+.icon{
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.disclaimer{
+  padding: 10px;
+}
+
+.disclaimer-link{
+  text-decoration: underline;
+}
+
+a{
+  text-decoration: none;
+}
+
+.global-nav{
+  display: none;
+}
+
+.search-icon{
+  margin-right: 20px;
+}
+
+.global-header__right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.global-nav-toggle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} 
+
+/* .global-nav-toggle{
+  margin-left: 25vw;
+  display : flex;
+  flex-direction: row;
+} */
+
+.site-title{
+  color: var(--bs-white);
+  text-decoration: none;
+}
+
+button{
+  height: 30px;
+  background-color: var(--bs-black);
+  color: var(--bs-white);
+  border: none;
+  font-size: x-large;
+}
+.hero-banner__image{
+  width: 100%;
+  height: auto;
+
+}
+.hero-banner__content{
+  grid-template-columns: 1fr 1fr 2fr;
+  display: grid;
+}
+
+span{
+  color: var(--bs-white);
+}
+
+#park-header{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  height: 70px;
+}
+
+#hero-banner{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+}
+.hero-banner__content{
+  grid-area: 3 / 1 / 4 / 6;
+  z-index: 1;
+  padding-left: 10px;
+  background-color: rgba(0, 0, 0, 0.575);
+}
+
+h1{
+  margin-right: 10px;
+}
+
+.park-Discription{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  gap: 1px;
+}
+
+.parkType, .statesOfPark{
+  color: var(--bs-white);
+  font-size: small;
+}
+
+img{
+  width: 100%;
+  height: 150px;
+  grid-area: 1 / 1 / 4 / 6;
+  z-index: 0;
+}
+
+
+.banner-icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--bs-white);
+}
