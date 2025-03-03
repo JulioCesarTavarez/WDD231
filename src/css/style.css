@@ -182,12 +182,12 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 1em;
-  height: 70px;
+  height: 50px;
 }
 
 .icon{
-  max-width: 30px;
-  max-height: 30px;
+  max-width: 20px;
+  max-height: 20px;
 }
 
 .disclaimer{
@@ -237,7 +237,7 @@ button{
   background-color: var(--bs-black);
   color: var(--bs-white);
   border: none;
-  font-size: x-large;
+  font-size: large;
 }
 .hero-banner__image{
   width: 100%;
@@ -254,15 +254,16 @@ span{
 }
 
 #park-header{
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-left: 25vw;
   padding-right: 25vw;
-  height: 70px;
+  height: 60px;
+  margin-bottom: 20px;
 }
 
 #hero-banner{
