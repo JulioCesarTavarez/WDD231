@@ -311,3 +311,23 @@ img{
   gap: 10px;
   color: var(--bs-white);
 }
+
+.main-Title{
+background-color: white;
+color: #000000;
+padding: 10%;
+}
+main{
+  padding : 10%;
+}
+
+.card-image{
+  width: 100%;
+  height: auto;
+
+}
+
+footer{
+  padding:10%;
+  background-color: rgb(235, 231, 226);
+}
