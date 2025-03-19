@@ -1,40 +1,29 @@
-import { getParkData } from "./parkService.mjs";
+import { getParkData, getParkLinks } from "./parkService.mjs";
+// import { bannerImage, mainHeader } from "./setHeaderFooter.mjs";
+
+async function init(){
+  const parkData = await getParkData();
+  const parkInfoLinks = await getParkLinks();
+
+  mainHeader(parkData);
+  bannerImage(parkData);
+  mainHolder(parkInfoLinks);
+  makeFooter(parkData);
+}
 
 
-async function bannerImage() {
-    const parkData = getParkData();
+async function bannerImage(parkData) {
+
 
     const bannerImage = document.getElementById("hero-banner__image");
 
     bannerImage.src = parkData.images[0].url;
+
 }
 
-const parkData = await getParkData();
 
-const parkInfoLinks = [
-  {
-    name: "Current Conditions &#x203A;",
-    link: "conditions.html",
-    image: parkData.images[2].url,
-    description:
-      "See what conditions to expect in the park before leaving on your trip!"
-  },
-  {
-    name: "Fees and Passes &#x203A;",
-    link: "fees.html",
-    image: parkData.images[3].url,
-    description: "Learn about the fees and passes that are available."
-  },
-  {
-    name: "Visitor Centers &#x203A;",
-    link: "visitor_centers.html",
-    image: parkData.images[9].url,
-    description: "Learn about the visitor centers in the park."
-  }
-];
-
-function mainHeader(){
-  bannerImage();
+function mainHeader(parkData){
+  bannerImage(parkData);
   const mainTitle = document.getElementById("mainTitle");
   const div = document.createElement("div");
   div.classList.add("main-header");
@@ -45,7 +34,7 @@ function mainHeader(){
 }
 
 function mainHolder(data){
-  mainHeader();
+
   for( let i = 0; i < data.length; i++){
     const main = document.querySelector("main");
     const div = document.createElement("div");
@@ -57,9 +46,8 @@ function mainHolder(data){
   }
 }
 
-mainHolder(parkInfoLinks);
 
-function makeFooter(){
+function makeFooter(parkData){
   const footer = document.querySelector("footer");
   let contact = document.createElement("h3");
   contact.classList.add("contact");
@@ -86,7 +74,7 @@ function makeFooter(){
 
 }
 
-makeFooter();
+init();
 
 
 
