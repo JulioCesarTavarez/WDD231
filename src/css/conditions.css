@@ -1,0 +1,57 @@
+@import "partials/footer.css";
+@import "partials/header.css";
+@import "partials/variable.css";
+@import "partials/aLinks.css";
+
+.alert-information {
+    background-color: var(--alert-information);
+    width: 30px;
+    height: 30px;
+}
+
+.alert-danger {
+    background-color: var(--alert-danger);
+    width: 30px;
+    height: 30px;
+}
+
+.alert-closure {
+    background-color: var(--alert-closure);
+    width: 30px;
+    height: 30px;
+}
+
+.alert-caution {
+    background-color: var(--alert-caution);
+    width: 30px;
+    height: 30px;
+}
+.alert-caution-h3{
+    color : var(--alert-caution);
+}
+
+.alert-closure-h3{
+    color: var(--alert-closure)
+}
+
+.alert-information-h3{
+    color: var(--alert-information)
+}
+
+details{
+    border: 1px solid var(--bs-black);
+    padding: 3%;
+}
+.visitor-center-li{
+    border-bottom: 1px solid var(--bs-black);
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.activities-ul{
+    list-style-type: disc;
+    padding-left: 5%;
+}

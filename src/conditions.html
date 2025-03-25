@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>[Park Name]</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="js/main.js"></script>
+    <link rel="stylesheet" href="css/conditions.css" />
+    <script type="module" src="js/conditions.js"></script>
   </head>
   <body>
     <p class="disclaimer">
@@ -89,7 +89,7 @@
           class="hero-banner__image"
         />
         <div class="hero-banner__content">
-          <h1>Yellowstone</h1>
+          <h1>Canyonlands</h1>
           <div id="park-Discription">
             <p class="parkType">Canyonlands</p>
             <p class="statesOfPark">UT</p>
@@ -131,10 +131,29 @@
       <section id="mainTitle" class="main-Title"></section>
     </header>
 
-    <main>
+    <main id="main">
+        <h1>Current Conditions</h1>
+        <section id = "alerts-section" class="alerts">
+          <h2>Alerts</h2>
+          <ul></ul>
+        </section>
 
+        <section id="visitor-section" class="visitor">
+          <h2>Visitor Services</h2>
+          <details class="visitor-details" name="current-details">
+            <summary>Visitor Centers</summary>
+            <ul id="visitor-section-details"></ul>
+          </details>
+        </section>
 
-    </main>
+        <section class="activities">
+          <h2>Activities</h2>
+          <details name="current-details">
+            <summary>All Activities</summary>
+            <ul id="activities-ul"></ul>
+          </details>
+        </section>
+      </main>
     
     <footer id="park-footer"></footer>
   </body>

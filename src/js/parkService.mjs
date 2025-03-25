@@ -201,14 +201,22 @@ const parkInfoLinks = [
   }
 ];
 
+// let setAlerts = [
+//   {
+//     alert : "closed",
+//     name : "GrandView closing for sonstruction weedays August through September",
+//     description : ```Grand View point overlook. Grand View point trail, and 0.3 mi (0.5 km) of park road will close 6 am Mondays to 4 pm Thursdays for a total,
+//     of eight WebSocketAlias. The closure applies to all sortUserPlugins, incliding vehicls tour buildErrorMessage, mortocycles, bikes & hikers.```
+//     ,
+//   }
+// ]
+
+
 
 
 export function getParkLinks(){
   return parkInfoLinks;
 }
-// export function getParkData() {
-//   return park;
-// }
 
 
 const baseUrl = "https://developer.nps.gov/api/v1/";
@@ -218,6 +226,26 @@ export async function getParkData() {
   const parkData = await getJson("parks?parkCode=yell");
   return parkData.data[0];
 }
+export async function getParkDataCanyon() {
+  const parkData = await getJson("parks?parkCode=cany");
+  return parkData.data[0];
+}
+
+export async function getAlertsData(){
+  let alertData = await getJson("alerts?parkCode=yell");
+  return alertData.data;
+}
+
+export async function getVisitorCenterData(){
+  let visitorCenterData = await getJson("visitorcenters?parkCode=cany");
+  return visitorCenterData.data;
+}
+
+export async function getActivities(){
+  let activitiesData = await getJson("activities?parkCode=cany");
+  return activitiesData.data;
+}
+
 
 
 async function getJson(url) {

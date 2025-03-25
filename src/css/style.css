@@ -1,6 +1,7 @@
 @import "partials/footer.css";
 @import "partials/header.css";
 @import "partials/variable.css";
+@import "partials/aLinks.css";
 
 /* Global styles */
 
@@ -12,35 +13,7 @@ body {
   margin: 0;
 }
 
-a:link,
-a:visited {
-  color: var(--bs-link-color);
-}
 
-a:hover {
-  color: var(--bs-link-hover-color);
-}
-
-/* Skip links styling */
-.skip-links ul {
-  list-style-type: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-.skip-links a {
-  font-size: 11px;
-  font-size: 0.6875rem;
-  position: absolute;
-  right: 20px;
-  top: -200px;
-  z-index: -1;
-}
-
-.skip-links a:focus {
-  top: 2px;
-  z-index: 9999;
-}
 
 /* Title and logo styling */
 
@@ -56,18 +29,7 @@ a:hover {
 
 /* Utility styles */
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+
 
 
 a{
@@ -114,7 +76,3 @@ main{
 
 }
 
-footer{
-  padding:10%;
-  background-color: rgb(235, 231, 226);
-}
