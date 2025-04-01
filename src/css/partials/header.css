@@ -15,17 +15,30 @@ svg {
     color: var(--bs-white);
   }
   .global-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap;  */
+    /* justify-content: space-bet; */
+    /* align-items: center; */
     padding: 0.5em 1em;
-    height: 50px;
+    height: fit-content;
   }
   
   .icon{
     max-width: 20px;
     max-height: 20px;
   }
+
+  a{
+    text-decoration: none;
+  }
+
+.global-nav__split-button a{
+  color: var(--bs-white);
+}
+
+  
   
   .disclaimer{
     padding: 10px;
@@ -33,6 +46,7 @@ svg {
   
   .disclaimer-link{
     text-decoration: underline;
+    color: blue;
   }
 
   
@@ -46,9 +60,15 @@ svg {
     border-right: 13px solid transparent;
   }
 
-  .global-nav{
-    display: none;
-  }
+.global-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.global-nav.open {
+  max-height: fit-content; /* Adjust to fit content */
+}
   
   .search-icon{
     margin-right: 20px;
@@ -58,6 +78,7 @@ svg {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-self: right;
   }
   .global-nav-toggle{
     display: flex;
@@ -138,3 +159,13 @@ svg {
     z-index: 0;
   }
   
+  .plan-visit {
+    color: var(--bs-white);
+  }
+
+  .global-nav__split-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }

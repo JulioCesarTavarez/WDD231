@@ -32,16 +32,8 @@ body {
 
 
 
-a{
-  text-decoration: none;
-}
 
 
-/* .global-nav-toggle{
-  margin-left: 25vw;
-  display : flex;
-  flex-direction: row;
-} */
 
 
 h1{
@@ -76,3 +68,16 @@ main{
 
 }
 
+.global-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.global-nav.open {
+  max-height: 500px; /* Adjust to fit content */
+}
+
+.hide{
+  display: none;
+}

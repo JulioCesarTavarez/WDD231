@@ -1,6 +1,30 @@
 import { getParkData, getParkLinks } from "./parkService.mjs";
 import { setHeaderFooter, mainHeader } from "./setHeaderFooter.mjs";
 
+
+let menuButtonValue = false;
+const menubutton = document.getElementById("global-nav-toggle");
+
+menubutton.addEventListener("click", toggleMenu);
+function toggleMenu() {
+  menuButtonValue = !menuButtonValue;
+  let text = document.getElementById("menu-button_text");
+  const globalNav = document.getElementById("global-nav");
+  const menuButtonIcon = document.getElementById("menu-button-icon");
+  
+  if (menuButtonValue) {
+      globalNav.classList.remove("open");
+      menuButtonIcon.classList.remove("hide");
+      text.textContent = "MENU";
+  } else {
+      text.textContent = "X CLOSE";
+      globalNav.classList.add("open");
+      menuButtonIcon.classList.add("hide");
+  }
+}
+
+
+
 async function init(){
   const parkData = await getParkData();
   const parkInfoLinks = await getParkLinks();
@@ -11,9 +35,6 @@ async function init(){
   // makeFooter(parkData);
   setHeaderFooter(parkData);
 }
-
-
-
 
 function mainHolder(data){
 
