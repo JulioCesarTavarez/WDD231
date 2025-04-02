@@ -81,3 +81,7 @@ main{
 .hide{
   display: none;
 }
+.global-nav__list a{
+  text-decoration: none;
+  color: var(--bs-white);
+}
