@@ -63,28 +63,27 @@ svg {
   }
 
 .global-nav {
-  max-height: 0;
+  height: 0;
   width: 100%;
   grid-area: 2/1/3/3;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
+
 }
 
 .global-nav.open {
-  max-height: fit-content; /* Adjust to fit content */
+  height: fit-content; /* Adjust to fit content */
 }
 
-.visitList{
-  max-height:0;
+.smallList{
+  height: 0px;
   width: 100%;
-  overflow: hidden;
   transition: max-height 5s ease-in-out;
   list-style: none;
   padding-left: 0;
-
 }
 
-.visitList li{
+.smallList li{
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 0;
@@ -92,8 +91,15 @@ svg {
 }
 
 
-.open{
-  max-height: fit-content;
+.smallList.open{
+  height: fit-content;
+}
+.smallList.close{
+  overflow: hidden;
+}
+
+.rotate{
+  transform: rotate(180deg);
 }
   
   .search-icon{
@@ -118,7 +124,7 @@ svg {
   }
   
   .global-nav-toggle{
-    height: 30px;
+    /* height: 30px; */
     background-color: var(--bs-black);
     color: var(--bs-white);
     border: none;
@@ -212,4 +218,62 @@ svg {
   border: none;
   background-color: #4b4b4b;
   color: #ffffff;
+}
+
+.global-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.global-nav.open {
+  max-height: fit-content; 
+}
+
+.hide{
+  display: none;
+}
+.global-nav__list a{
+  text-decoration: none;
+  color: var(--bs-white);
+}
+
+.global-nav ul{
+  text-decoration: none;
+  list-style: none;
+  padding-left: 0;
+  color: var(--bs-white);
+}
+.smallList ul li a{
+  color: var(--bs-white);
+}
+
+@media screen and (min-width: 768px) {
+  .global-nav__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .global-nav__list li:first-child, .global-nav__section-heading {
+    display: none;
+  }
+
+  .global-nav__split-button__toggle{
+    display: none;
+  }
+  .global-nav__split-button__toggle svg{
+    display: none;
+  }
+
+  .global-nav__split-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #000000;
+  }
+  .smallList{
+    height: fit-content;
+}
+  
 }
